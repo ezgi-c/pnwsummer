@@ -31,8 +31,7 @@ function timeOfDay(){
     return message;
 }
 
-
- function dePixelate(){
+function dePixelate(){
     //  let answer = prompt ('pick 1 or 2');
      let image = '';
      if (confirm('Do you want to see?')) {
@@ -44,3 +43,14 @@ function timeOfDay(){
      return document.write(image);
  }
 
+guess();
+function guess(){
+    let answer=prompt("Guess how many fingers I am holding");
+    if(answer=="3"){
+        alert("correct");
+        return;
+    } else {
+    alert("wrong answer");
+    }
+    guess();  
+}
