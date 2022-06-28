@@ -1,67 +1,46 @@
 'use strict'
-// use strict tells us to follow some baseline 'strict rules'
-
-// variables = storing data as values. 
-
-// Comment out in mass
-// ctrl + k + c
-
-// declaring the variable firstname to be equal to the value of ezgi
-
-// let firstName = 'Ezgi'; //string
-// let lastName = "Coban"; //single or double quotes are acceptable
-// let numberofCats = 2; //number
-// let lovesMelis = true; //boolean
-
- let firstName = prompt('What is your name?')
-
-// === strict equals
-// == lose equals (truthy or a falsey) '1' == 1
-
-// if(firstName.toLowerCase() === 'ezgi'){
-//     console.log('your name is ezgi')
-// }
-
-// output to the console some value
-// console.log('your name is: ' + firstName);
-// console.log('You have ' + numberofCats + ' cats');
-
-let time = prompt('What hour is it (0-24)')
-let message = '';
-// if time of day is before noon then we want to say "Good Morning"
 
 
-if(time <= 11){
-    message = 'Good Morning!! ';
-   // console.log('Good Morning!!');
-} else if(time <= 18){
-    message = 'Good Afternoon!! ';
-  //  console.log('Good Afternoon!!');
-} else if(time <= 24){
-    message = 'Good Night!! ';
-  //  console.log('Good Night!!);
-} else{
-    message = 'Good Day!! ';
-   // console.log('Good Day!!');
+function generateGreeting(){
+    let firstName = getFirstName(); 
+    let message = timeOfDay(); 
+    return document.write('Hello ' + firstName + ', ' + message + '!');
 }
 
-console.log('done with program')
+function getFirstName(){
+    let firstName = prompt('What is your Name?'); 
+    return firstName;
+}
 
-document.write('Hello ' + firstName +'! ' + message);
+
+function timeOfDay(){
+    let time = prompt('What hour is it (0-24?)');
+    let message = '';
+    
+    
+    if(time <= 11 && time > 0){
+        message = 'Good Morning!!';
+    } else if(time <= 18){
+     message = 'Good Afternoon!!';
+    } else if(time <= 24){
+     message = 'Good Evening!!';
+    } else{
+      message = 'Good Day!!';
+    }
+
+    return message;
+}
 
 
+ function dePixelate(){
+    //  let answer = prompt ('pick 1 or 2');
+     let image = '';
+     if (confirm('Do you want to see?')) {
+         image = '<img id="hero" alt="main image" src="https://mwbbcwxck32zpp124d9nlwip-wpengine.netdna-ssl.com/wp-content/uploads/2018/06/12173166_web1_summerguide-sea-180606-P1.jpg">'
+     } else {
+         image = '<img id="hero2" alt="main image" src="https://www.robandnick.com/files/62wk_img_1.jpg">'
 
- 
- if (confirm("Are you a cat?")) {
-     document.write("Meow!");
- } else {
-     document.write("");
+     }
+     return document.write(image);
  }
-  
 
-
-
-// code is ran from top to bottom after running 
-// the first script, it is done
-
-// if...else if...else
