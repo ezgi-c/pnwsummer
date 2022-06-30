@@ -92,13 +92,14 @@ function beachLoop2(){
 
 function forLoopSealPup(){
 
-    let answer = prompt('How many seal pups do you want?'); 
+    let answer = prompt('What is your rating? (1-5)'); 
     let output = '';
     for(let x = 0; x < answer; x++){
        output += "<img class='sealpup' src='seal pup.jpeg'/>"
-    //  output = output + "<img class='star' src='star.jpg' />"
+    //  output = output + "<img class='sealpup' src='seal pup.jpeg'/>"
     }
-    return document.write(output);
+ //   return document.write(output);
+    return document.getElementById('rating').innerHTML = output;   
 }
         
 
