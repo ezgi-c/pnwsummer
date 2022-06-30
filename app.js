@@ -37,7 +37,7 @@ function dePixelate(){
      if (confirm('Do you want to see?')) {
          image = '<img id="hero" alt="main image" src="https://mwbbcwxck32zpp124d9nlwip-wpengine.netdna-ssl.com/wp-content/uploads/2018/06/12173166_web1_summerguide-sea-180606-P1.jpg">'
      } else {
-         image = '<img id="hero2" alt="main image" src="https://www.robandnick.com/files/62wk_img_1.jpg">'
+         image = '<img id="hero2" alt="main image" src="pixelated.jpg">'
 
      }
      return document.write(image);
